@@ -8,7 +8,31 @@
   <body>
     <container class = "profile">
       {{#user}}
-      {{avatar}}
+      <img src = "{{avatar}}" alt = "Picture of {{name}}">
+      <div>
+          <h2>{{name}}</h2>
+          <h4>{{#address}}{{city}}{{state_or_province}}{{/address}}|</h4>
+          <h3>{{job}} {{company}}</h3>
+          <h3 class = "unemployed">{{^job}}Available for hire{{/job}}</h3>
+          <h3>{{email}} | {{phone}}
+      </div>
+      <div>
+        <div class = "education">
+          {{^university}}{{/university}}
+          <h5>Education</h5>
+          <ul>
+            <li>{{university}}</li>
+          </ul>
+        </div>
+        <div class = "skills">
+          <h5>Skills</h5>
+          <ul>
+            {{#skills}}
+            <li>{{.}}</li>
+            {{/skills}}
+          </ul>
+        </div>
+      </div>
       {{/user}}
     </container>
   </body>
