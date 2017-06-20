@@ -1,0 +1,17 @@
+.directory{
+  display: flex;
+  flex-wrap: wrap;
+}
+.usercards{
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis:20%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin: 3%;
+}
+
+#unemployed{
+  flex-basis: 50%;
+}
